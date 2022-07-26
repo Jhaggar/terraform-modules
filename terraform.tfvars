@@ -33,15 +33,20 @@ stack_name = "sapp-sns-stack"
 ###########################################################
 //backend_S3_bucket_name = ""
 instance_count = 1
+
 account_id = "906890597400"
+
 environment = "devl"
+
 ### VPC ####
-vpc_name = "default"                   // personl
-//vpc_id = "vpc-037f20a3d6c9f7536"        // Johnderee
+//vpc_name = "default"                   // personl
+vpc_id = "vpc-037f20a3d6c9f7536"        // Johnderee
 
 #### SUBNET ID ###
 subnet_prefix = "default-subnet"
 //subnet_prefix = "vpn-devl-Private"
+subnet_id_1 = "subnet-030f687267646673e"
+subnet_id_2 = "subnet-055a700a6321eee09"
 
 ### Security Group #####
 db_security_group_name = "sg-035b67f6a4e3b8edc"
@@ -65,12 +70,12 @@ allocated_storage = 20
 instance_class = "db.t3.micro"
 
 ##### Secret Key name #####
-secret_key = "CHANNEL/johndereee-jdhj"
+secret_key = "CHANNEL/johndereee-jdhjdaasdA"
 
 #### KMS KEY ####
 #sapp_kms_alias = demojohnderee2
-kms_key = "johnderee/kmstest1512"
-//kms_key = ""
+#kms_key = "johnderee/kmstest1512"
+kms_key = "arn:aws:kms:us-east-1:906890597400:key/656650a1-056f-4955-bcdb-6027e268c95e"
 
 final_snapshot_identifier = "johnderee-final-snapshot"
 
@@ -80,9 +85,13 @@ monitoring_interval = 30
 
 monitoring_role_arn = "arn:aws:iam::906890597400:role/rdsdevlEnhancedMonitoringRole"
 
+# 524MB
 alarm_free_memory_threshold = 524288000
 
 alarm_disk_queue_threshold = 60
+
+#10 GB
+alarm_free_disk_threshold = 10000000000
 
 alarm_cpu_credit_balance_threshold = 60
 
