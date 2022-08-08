@@ -182,31 +182,41 @@ variable "engine" {
   type = string
 }
 
-//variable "vpc_id" {
-//  type = string
-//}
+variable "vpc_id" {
+  type = string
+}
 
 variable "db_security_group_name" {
   type = string
 }
+
 variable "db_security_group_name1" {
   type = string
 }
+
 variable "db_security_group_name2" {
   type = string
 }
+
 variable "db_security_group_name3" {
   type = string
 }
 
-
-variable "vpc_name" {
+variable "subnet_id_1" {
   type = string
 }
 
-variable "subnet_prefix" {
+variable "subnet_id_2" {
   type = string
 }
+
+//variable "vpc_name" {
+//  type = string
+//}
+//
+//variable "subnet_prefix" {
+//  type = string
+//}
 
 variable "db_subnet_group_name" {
   type = string
@@ -220,14 +230,14 @@ variable "db_family" {
   type = string
 }
 
-//variable "kms_key" {
-//  type = string
-//}
-
-variable "sapp_kms_alias" {
-  default = "demojohnderee2"
+variable "kms_key" {
   type = string
 }
+
+//variable "sapp_kms_alias" {
+//  default = "demojohnderee2"
+//  type = string
+//}
 
 variable "secret_key" {
   type = string
@@ -270,7 +280,7 @@ variable "alarm_disk_queue_threshold" {
 
 variable "alarm_free_disk_threshold" {
   # 5GB
-  default     = 5000000000
+  #default     = 5000000000
   type        = number
   description = "Free disk alarm threshold in bytes"
 }
